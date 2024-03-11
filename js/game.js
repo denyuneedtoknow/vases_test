@@ -1,30 +1,14 @@
+import Phaser from "phaser";
+import PreloadScene from "./GameScenes/preloadScene";
+import MainScene from "./GameScenes/mainScene";
 
-let gameScene = new Phaser.Scene("Game");
-gameScene.preload = function () {
 
 
-};
-gameScene.init = function () {};
-
-gameScene.create = function () {
- 
-};
-gameScene.update = function () {
-
-};
-let config = {
+const config = {
   type: Phaser.AUTO,
-  width: 640,
-  height: 360,
+  width: 1920,
+  height:1080,
   scene: [PreloadScene, MainScene],
-  pixelArt: false,
-  title: "Vases",
-  physics: {
-    default: "arcade",
-    arcade: {
-      gravity: { y: 20 },
-      debug: true,
-    },
-  },
 };
-let game = new Phaser.Game(config);
+
+const game = new Phaser.Game(config);
