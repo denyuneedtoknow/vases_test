@@ -101,7 +101,8 @@ class Vases extends Phaser.GameObjects.Container {
       rose.showDemo();
     });
   }
-  showSelectedAnswer() {
+    showSelectedAnswer() {
+      this.restartRoses()
     let redRosesShown = 0;
     let whiteRosesShown = 0;
     this.redNumberNeeded = this.scene.bg.data.get("red_roses_needed");
