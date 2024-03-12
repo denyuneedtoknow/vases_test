@@ -4,7 +4,6 @@ import LevelIndicator from "./levelIndicator";
 import Result from "./result";
 import Task from "./task";
 
-
 class UserInterface extends Phaser.GameObjects.Container {
   constructor(scene) {
     super(scene);
@@ -20,6 +19,7 @@ class UserInterface extends Phaser.GameObjects.Container {
     this.uiBg = this.scene.add
       .image(this.scene.scale.width / 2, this.scene.scale.height, "ui_bg")
       .setOrigin(0.5, 1);
+    const fx = this.uiBg.postFX.addShine(1, 0.2, 5);
     this.add(this.uiBg);
   }
   addTask() {

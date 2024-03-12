@@ -30,28 +30,28 @@ class Vases extends Phaser.GameObjects.Container {
     const zone = this.scene.add
       .zone(960, 340, 300, 800)
       .setRectangleDropZone(300, 600);
-    const graphics = this.scene.add.graphics();
-    graphics.lineStyle(2, 0xffff00);
-    graphics
-      .strokeRect(
-        zone.x - zone.input.hitArea.width / 2,
-        zone.y - zone.input.hitArea.height / 2,
-        zone.input.hitArea.width,
-        zone.input.hitArea.height
-      )
-      .setDepth(LAYERS.VASES-1);
+    // const graphics = this.scene.add.graphics();
+    // graphics.lineStyle(2, 0xffff00);
+    // graphics
+    //   .strokeRect(
+    //     zone.x - zone.input.hitArea.width / 2,
+    //     zone.y - zone.input.hitArea.height / 2,
+    //     zone.input.hitArea.width,
+    //     zone.input.hitArea.height
+    //   )
+    //   .setDepth(LAYERS.VASES-1);
     this.add(zone);
       this.scene.input.on("dragenter", (pointer, gameObject, dropZone) => {
         gameObject.setDepth(LAYERS.ROSE); 
       this.checkRoses(gameObject.texture.key);
-      graphics.clear();
-      graphics.lineStyle(2, 0x00ffff);
-      graphics.strokeRect(
-        zone.x - zone.input.hitArea.width / 2,
-        zone.y - zone.input.hitArea.height / 2,
-        zone.input.hitArea.width,
-        zone.input.hitArea.height
-      );
+    //   graphics.clear();
+    //   graphics.lineStyle(2, 0x00ffff);
+    //   graphics.strokeRect(
+    //     zone.x - zone.input.hitArea.width / 2,
+    //     zone.y - zone.input.hitArea.height / 2,
+    //     zone.input.hitArea.width,
+    //     zone.input.hitArea.height
+    //   );
     });
   }
   addRoses() {
