@@ -1,4 +1,4 @@
-import { LAYERS } from "../variables";
+import { EVENTS_DEFAULT, LAYERS } from "../variables";
 
 class Task extends Phaser.GameObjects.Container {
   constructor(scene) {
@@ -10,9 +10,7 @@ class Task extends Phaser.GameObjects.Container {
     this.addRoses();
   }
   addListeners() {
-    // this.scene.bg.data.on("changedata-red_roses_needed", () => {
-    //   this.updateText.bind(this);
-    // });
+    this.scene.emitter.on(EVENTS_DEFAULT.NEXT_LEVEL, this.updateText.bind(this));
   }
   addText() {
     this.redNumber = this.scene.bg.data.get("red_roses_needed");

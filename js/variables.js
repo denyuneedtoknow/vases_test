@@ -16,3 +16,10 @@ export const rosesPosition = {
   9: { x: 1520, y: 360, color: "white" },
   10: { x: 1580, y: 380, color: "white" },
 };
+export const EVENTS_DEFAULT = {
+  NEXT_LEVEL: "nextLevel",
+
+  FAILED: "failed",
+
+  CHARACTER_ANIMATION_COMPLETE: "character_animation_complete",
+};

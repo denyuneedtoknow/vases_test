@@ -40,6 +40,7 @@ module.exports = (env, argv) => {
         // Simplify creation of HTML files to serve your bundles
         title: "Phaser Game", // Title of the game to use in the generated HTML
         template: "index.html", // Path to HTML template
+        filename: "index.html", // Output file name (default is index.html)
       }),
     ],
     devServer: {
